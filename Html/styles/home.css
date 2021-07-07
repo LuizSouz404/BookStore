@@ -1,6 +1,6 @@
 .content {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   grid-template-rows: 7rem 1fr;
 
   grid-template-areas:
@@ -88,4 +88,39 @@ header a strong {
 
 header a strong:hover {
   color: var(--hover-blue);
+}
+
+.container {
+  padding: 0 6%;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+
+  margin: 1.5rem 0;
+}
+
+.slider h2 {
+  font-size: 2rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  text-align: center;
+}
+
+.book img {
+  margin-bottom: 0.5rem;
+}
+
+.book strong {
+  font-size: 1.25rem;
+}
+
+.book span {
+  font-size: 0.85rem;
 }

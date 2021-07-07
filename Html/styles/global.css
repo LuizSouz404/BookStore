@@ -36,11 +36,23 @@ body {
   background: var(--background);
 }
 
+strong,
+h1,
+h2 h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
 body,
 button,
 input {
   font-size: clamp(14px, 1.6rem, 2vw);
   font-family: 'Open Sans', sans-serif;
+}
+
+strong,
+h1,
+h2 {
+  font-family: 'Poppins', Arial;
 }
 
 .content {
