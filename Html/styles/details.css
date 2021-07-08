@@ -1,0 +1,111 @@
+.container {
+  padding: 0 6%;
+}
+
+.book-details {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.book-details img {
+  width: 18.3125rem;
+}
+
+.book-details .details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 6rem;
+}
+
+.book-details .details strong {
+  font-size: 1.6875rem;
+}
+
+.book-details .details span {
+  font-size: 0.9375rem;
+  margin-bottom: 3rem;
+}
+
+.book-details .details p {
+  font-size: 0.9375rem;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.button-details {
+  padding: 2.5%;
+  background-color: var(--grey-light);
+  border-radius: 0.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45%;
+  color: #06070d;
+  font-family: 'Poppins', Arial;
+  font-size: 0.85rem;
+}
+
+.button-details img {
+  margin-right: 0.8125rem;
+}
+
+.download-button {
+  width: 100%;
+  color: white;
+  padding: 0.85rem;
+  border-radius: 1.125rem;
+  font-family: 'Poppins', Arial;
+  background-color: #06070d;
+}
+
+.button-details img {
+  width: 1.25rem;
+}
+
+.other-book h2 {
+  font-size: 1.6875rem;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 2rem;
+
+  margin: 2.25rem 0;
+}
+
+.carousel a {
+  width: 8.1875rem;
+}
+
+.slider h2 {
+  font-size: 1.5rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 8.1875rem;
+  text-align: center;
+}
+
+.book img {
+  margin-bottom: 0.5rem;
+}
+
+.book strong {
+  color: #313131;
+  font-size: 1rem;
+}
+
+.book span {
+  color: var(--grey);
+  font-size: 0.75rem;
+}
