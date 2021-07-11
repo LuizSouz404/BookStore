@@ -15,8 +15,8 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/details.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     
   </head>
   <body>
@@ -34,13 +34,13 @@
           </div>
         </form>
 
-        <a href="">
+        <a  class="ativar" href="#">
           <img src="./assets/book-medical.svg" alt="Requisitar Livro">
           <strong>Requisitar livro</strong>
         </a>
       </header>
   
-      <div class="container">
+      <main>
         <section class="book-details">
           <img src="./assets/Book/livro-6.svg" alt="livro-6">
           <div class="details">
@@ -52,16 +52,16 @@
               Nemesis knows she will protect Tyrus at any cost</p>
   
             <div class="container-buttons ">
-              <a class="button-details" href="">
+              <a class="button-details" href="#LerOnline">
                 <img src="./assets/Vector.svg" alt="Read">
                 Ler Online
               </a>
-              <a class="button-details" href="">
+              <a class="button-details" href="#Reviews">
                 <img src="./assets/message-3-line 1.svg" alt="Reviews">
                 Reviews
               </a>
             </div>
-            <a href="" class="download-button">Download</a>
+            <a href="#Download" class="download-button">Download</a>
           </div>
         </section>
 
@@ -101,7 +101,7 @@
             </a>
           </div>
         </section>
-      </div>
+      </main>
   
       <div class="side-bar">
         <h2>Categorias</h2>
@@ -114,6 +114,27 @@
           <li><a href="">Ciências</a></li>
           <li><a href="">Filosofia</a></li>
         </ul>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2>Requisitar Livro</h2>
+        <p>
+          Não temos disponivel o livro que você quer?
+Envie uma requisição que disponibilizarem o mais rapido possivel
+        </p>
+
+        <form action="#">
+          <input type="text" placeholder="Nome do Livro">
+          <input type="text" placeholder="Autor do Livro">
+
+          <div class="buttons">
+            <div class="button grey">Cancelar</div>
+            <button class="blue">Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>

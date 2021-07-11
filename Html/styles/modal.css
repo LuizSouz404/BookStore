@@ -18,25 +18,25 @@
 }
 
 .modal-wrapper .modal {
-  width: min(43.0625rem, 90%);
+  width: min(50rem, 90%);
   background-color: var(--background);
 
   margin: auto;
-  padding: 2.8125rem 7.3125rem;
+  padding: 4rem 7.3125rem;
 
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 .modal-wrapper .modal > h2 {
-  font-size: 1.75rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--black);
 }
 
 .modal-wrapper .modal > p {
-  font-size: 1.125rem;
+  font-size: 1.4rem;
   color: var(--grey);
   margin-bottom: 2.25rem;
 }
@@ -49,7 +49,7 @@
 }
 
 .modal-wrapper .modal input {
-  font-size: 1rem;
+  font-size: 1.6rem;
   padding: 0.9375rem;
   width: min(80%, 28.4375rem);
   border: 0.125rem solid var(--blue);
@@ -60,5 +60,5 @@
 
 .modal-wrapper .modal .buttons > button,
 .modal-wrapper .modal .buttons > .button {
-  padding: 1.3rem 3.2rem;
+  padding: 1.5rem 4.3rem;
 }
