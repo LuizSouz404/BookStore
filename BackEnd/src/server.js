@@ -10,6 +10,10 @@ server.set('view engine', 'ejs');
 
 server.set('views', path.join(__dirname, 'views'));
 
+server.use(express.urlencoded({extended: true}));
+
+server.use(express.json());
+
 server.use(routes);
 
 server.listen(3333, () => {

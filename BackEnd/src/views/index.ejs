@@ -14,28 +14,30 @@
     
     <!-- CSS -->
 
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     
+    <!-- SCRIPTS -->
+    <script src="/scripts/main.js" defer type="module"></script>
   </head>
   <body>
     <div class="content" id="home">
       <header>
         <a href="#">
-          <img class="logo" src="images/Logo.svg" alt="Livro Livre" >
+          <img class="logo" src="/images/Logo.svg" alt="Livro Livre" >
         </a>
 
         <!-- Search Input -->
         <form action="">
           <div class="search-input">
             <input id="search" type="text">
-            <input type="image" src="images/search.svg" alt="Pesquisar"></label>
+            <input type="image" src="/images/search.svg" alt="Pesquisar"></label>
           </div>
         </form>
 
-        <a href="">
-          <img src="images/book-medical.svg" alt="Requisitar Livro">
+        <a href="#" class="request">
+          <img src="/images/book-medical.svg" alt="Requisitar Livro">
           <strong>Requisitar livro</strong>
         </a>
       </header>
@@ -47,7 +49,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-1.svg" alt="Livro um">
+                <img src="/images/Book/livro-1.svg" alt="Livro um">
   
                 <strong>Fashionopolis</strong>
   
@@ -57,7 +59,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-2.svg" alt="Livro dois">
+                <img src="/images/Book/livro-2.svg" alt="Livro dois">
   
                 <strong>Insgnia</strong>
   
@@ -67,7 +69,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-3.svg" alt="Livro três">
+                <img src="/images/Book/livro-3.svg" alt="Livro três">
   
                 <strong>Insgnia</strong>
   
@@ -77,7 +79,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-4.svg" alt="Livro quatro">
+                <img src="/images/Book/livro-4.svg" alt="Livro quatro">
   
                 <strong>Insgnia</strong>
   
@@ -87,7 +89,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-5.svg" alt="Livro um">
+                <img src="/images/Book/livro-5.svg" alt="Livro um">
   
                 <strong>Fashionopolis</strong>
   
@@ -97,7 +99,7 @@
 
             <a href="">
               <div class="book">
-                <img src="images/Book/livro-6.svg" alt="Livro dois">
+                <img src="/images/Book/livro-6.svg" alt="Livro dois">
   
                 <strong>Insgnia</strong>
   
@@ -131,12 +133,12 @@
 Envie uma requisição que disponibilizarem o mais rapido possivel
         </p>
 
-        <form action="#">
-          <input type="text" placeholder="Nome do Livro">
-          <input type="text" placeholder="Autor do Livro">
+        <form action="/request" method="POST">
+          <input type="text" name="title" placeholder="Nome do Livro">
+          <input type="text" name="author" placeholder="Autor do Livro">
 
           <div class="buttons">
-            <div class="button grey">Cancelar</div>
+            <div class="button grey cancel">Cancelar</div>
             <button class="blue">Enviar</button>
           </div>
         </form>
