@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Livro Livre | Inicial</title>
+    <title>Livro Livre | <%= books[0].title %></title>
   
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/details.css">
     <link rel="stylesheet" href="/styles/modal.css">
     
     <!-- SCRIPTS -->
@@ -29,10 +29,10 @@
         </a>
 
         <!-- Search Input -->
-        <form action="/book" method="GET" >
+        <form action="">
           <div class="search-input">
-            <input id="search" name="search" type="text">
-            <img onclick="submit()" class="button" src="/images/search.svg" alt="Pesquisar">
+            <input id="search" type="text">
+            <input type="image" src="/images/search.svg" alt="Pesquisar"></label>
           </div>
         </form>
 
@@ -43,26 +43,66 @@
       </header>
   
       <main>
-        <div class="slider">
-          <h2>Popular Books</h2>
+        <section class="book-details">
+          <% books.forEach(book => { %>
+          <img src="<%= book.cover %>" alt="livro-6">
+          <div class="details">
+              <strong><%= book.title %></strong>
+              <span><%= book.author %></span>
+
+              <p><%= book.synopsis %></p>
+
+              <div class="container-buttons ">
+                <a class="button-details" href="#LerOnline">
+                  <img src="/images/Vector.svg" alt="Read">
+                  Ler Online
+                </a>
+                <a class="button-details" href="#Reviews">
+                  <img src="/images/message-3-line 1.svg" alt="Reviews">
+                  Reviews
+                </a>
+              </div>
+              <a href="<%= book.url %>" class="download-button">Download</a>
+            </div>
+            <% }); %>
+        </section>
+
+        <section class="other-book">
+          <h2>Mesmo autor</h2>
           <div class="carousel">
 
-            <% books.forEach(book => { %>
+            <a href="">
+              <div class="book">
+                <img src="/images/Book/livro-2.svg" alt="Livro dois">
+              </div>
+            </a>
 
-              <a href="book/<%= book.id %>">
-                <div class="book">
-                  <img src="<%= book.cover %>"  alt="<%= book.title %>">
-    
-                  <strong><%= book.title %></strong>
-    
-                  <span><%= book.author %></span>
-                </div>
-              </a>
-              
-            <% }); %>
+            <a href="">
+              <div class="book">
+                <img src="/images/Book/livro-3.svg" alt="Livro três">
 
+              </div>
+            </a>
+
+            <a href="">
+              <div class="book">
+                <img src="/images/Book/livro-4.svg" alt="Livro quatro">
+              </div>
+            </a>
+
+            <a href="">
+              <div class="book">
+                <img src="/images/Book/livro-5.svg" alt="Livro dois">
+              </div>
+            </a>
+
+            <a href="">
+              <div class="book">
+                <img src="/images/Book/livro-7.svg" alt="Livro dois">
+              </div>
+            </a>
           </div>
-        </div>
+        </section>
       </main>
   
       <div class="side-bar">
