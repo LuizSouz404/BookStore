@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,37 +71,13 @@
         <section class="other-book">
           <h2>Mesmo autor</h2>
           <div class="carousel">
-
-            <a href="">
+          <% sameAuthor.forEach(author => { %>
+            <a href="/book/<%= author.id %> ">
               <div class="book">
-                <img src="/images/Book/livro-2.svg" alt="Livro dois">
+                <img src="<%= author.cover %>" alt="<%= author.title %>">
               </div>
             </a>
-
-            <a href="">
-              <div class="book">
-                <img src="/images/Book/livro-3.svg" alt="Livro três">
-
-              </div>
-            </a>
-
-            <a href="">
-              <div class="book">
-                <img src="/images/Book/livro-4.svg" alt="Livro quatro">
-              </div>
-            </a>
-
-            <a href="">
-              <div class="book">
-                <img src="/images/Book/livro-5.svg" alt="Livro dois">
-              </div>
-            </a>
-
-            <a href="">
-              <div class="book">
-                <img src="/images/Book/livro-7.svg" alt="Livro dois">
-              </div>
-            </a>
+          <% }) %>
           </div>
         </section>
       </main>
@@ -109,7 +86,7 @@
         <h2>Categorias</h2>
         <ul>
           <% categories.forEach(category => { %>
-            <li><a href="#<%= category.description %>"><%= category.description %></a></li>
+            <li><a href="/category/<%= category.description %>"><%= category.description %></a></li>
           <% }) %>
         </ul>
       </div>

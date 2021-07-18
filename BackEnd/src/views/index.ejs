@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +70,7 @@
         <h2>Categorias</h2>
         <ul>
           <% categories.forEach(category => { %>
-            <li><a href="#<%= category.description %>"><%= category.description %></a></li>
+            <li><a href="/category/<%= category.description %>"><%= category.description.replace('-', ' ') %></a></li>
           <% }) %>
         </ul>
       </div>
