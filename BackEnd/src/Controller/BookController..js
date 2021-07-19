@@ -56,8 +56,10 @@ module.exports = {
     const id = request.params.id;
     
     const book = await db.all(`SELECT * FROM books WHERE id="${id}"`);
-    const sameAuthor = await db.all(`SELECT * FROM books WHERE author="${book[0].author}"`);
+    const sameAuthor = await db.all(`SELECT * FROM books WHERE author="${book[0].author}" AND NOT title="${book[0].title}"`);
     const category = await db.all(`SELECT description FROM categories`);
+
+    console.log(sameAuthor);
     
     await db.close();
 
