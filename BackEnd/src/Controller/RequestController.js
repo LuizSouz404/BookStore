@@ -1,20 +1,31 @@
-const Database = require('../database/config');
+const path = require('path');
+const sendMailRequest = require('../service/sendMailRequest');
 
 module.exports = {
   async index(request, response) {
-    const db = await Database();
     const {title, author} = request.body;
 
-    await db.run(`INSERT INTO requests (
-      title, author
-    ) VALUES (
-      "${title}", "${author}"
-    )`);
+    const requestPath = path.resolve(
+      __dirname,
+      '..',
+      'views',
+      'emails',
+      'requestBook.hbs'
+    );
 
-    await db.close();
+    const variables = {
+      title,
+      author,
+      date: Date().slice(0,21)
+    };
 
-    return response.status(200).redirect('..').json({
-      message: `Você requisitou com sucesso o Livro ${title} de ${author}, retornaremos o mais prevê possível!`
-    })
+    await sendMailRequest(
+      'equipe.LivroLivre@gmail.com',
+      `Requisição do livro ${title}`,
+      variables,
+      requestPath
+    );
+
+    return response.status(200).redirect('..')
   }
 } 

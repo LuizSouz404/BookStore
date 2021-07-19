@@ -21,12 +21,6 @@ const initDB = {
     DROP TABLE "reviews";
     ALTER TABLE "temporary_reviews" RENAME TO "reviews";`); 
 
-    await db.exec(`CREATE TABLE "requests" (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      title TEXT,
-      author TEXT
-    )`)
-
     await db.close();
   }
 }
