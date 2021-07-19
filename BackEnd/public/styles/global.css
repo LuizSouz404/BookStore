@@ -168,6 +168,24 @@ header form > div {
   padding: 1rem;
 }
 
+header form > div.active {
+  border: 0.2rem solid #4767ed;
+}
+
+header form div img.active {
+  filter: invert(42%) sepia(67%) saturate(621%) hue-rotate(191deg)
+    brightness(90%) contrast(109%);
+}
+
+header form div img {
+  cursor: pointer;
+}
+
+header form div img:hover {
+  filter: invert(42%) sepia(67%) saturate(621%) hue-rotate(191deg)
+    brightness(90%) contrast(109%);
+}
+
 header input {
   background: transparent;
   outline-style: none;
@@ -177,10 +195,6 @@ header input[type='text'] {
   width: 100%;
   margin-left: 1rem;
   font-size: 1.6rem;
-}
-
-header input[type='image'] {
-  width: 3rem;
 }
 
 header a {
