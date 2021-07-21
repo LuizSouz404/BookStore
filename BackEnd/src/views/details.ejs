@@ -46,7 +46,7 @@
       <main>
         <section class="book-details">
           <% books.forEach(book => { %>
-          <img src="<%= book.cover %>" alt="livro-6">
+          <img src="/images/<%= book.id %>.jpg" alt="livro-6">
           <div class="details">
               <strong><%= book.title %></strong>
               <span><%= book.author %></span>
@@ -74,7 +74,7 @@
           <% sameAuthor.forEach(author => { %>
             <a href="/book/<%= author.id %> ">
               <div class="book">
-                <img src="<%= author.cover %>" alt="<%= author.title %>">
+                <img src="/images/<%= author.id %>.jpg" alt="<%= author.title %>">
               </div>
             </a>
           <% }) %>

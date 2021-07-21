@@ -3,9 +3,10 @@
   margin-bottom: 3rem;
 }
 
-.book-details img {
+.book-details > img {
   border-radius: 2.5rem;
   width: 31.5rem;
+  box-shadow: 3px 3px 7px 1px rgb(0 0 0 / 59%);
 }
 
 .book-details .details {
@@ -52,6 +53,7 @@
 
 .button-details img {
   margin-right: 1rem;
+  width: 2rem;
 }
 
 .download-button {
@@ -61,10 +63,6 @@
   border-radius: 1.1rem;
   font-family: 'Poppins', Arial;
   background-color: #06070d;
-}
-
-.button-details img {
-  width: 2rem;
 }
 
 .other-book h2 {

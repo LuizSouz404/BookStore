@@ -4,13 +4,14 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node .",
     "init-db": "node src/database/init.js"
   },
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
+    "multer": "^1.4.2",
     "nodemailer": "^6.6.3",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2",

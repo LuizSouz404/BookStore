@@ -152,7 +152,7 @@ header.active {
 }
 
 header .logo {
-  width: 12.3rem;
+  width: 9.5rem;
 }
 
 header form {
@@ -244,4 +244,24 @@ header a strong:hover {
 
 .side-bar a:hover {
   color: var(--hover-blue);
+}
+
+/*********** RESPONSIVITY ***********/
+
+@media only screen and (max-width: 800px) {
+  header .logo {
+    width: 9.5rem;
+  }
+
+  header form {
+    width: 65%;
+  }
+
+  header a strong {
+    display: none;
+  }
+
+  .side-bar {
+    margin-right: 35%;
+  }
 }

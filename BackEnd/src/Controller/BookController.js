@@ -1,5 +1,6 @@
 const Database = require("../database/config");
-
+const path = require('path');
+const uploadConfig = require("../config/upload");
 
 module.exports = {
   async create(request, response) {
@@ -14,9 +15,9 @@ module.exports = {
   
       if (categoryExists) {
         await db.run(`INSERT INTO books (
-          id, title, author, cover, synopsis, url, categoryID
+          id, title, author, synopsis, url, categoryID
         ) VALUES (
-          "${id}", "${books[i].title}", "${books[i].author}", "${books[i].cover}", "${books[i].synopsis}", "${books[i].url}", "${categoryExists.key}"
+          "${id}", "${books[i].title}", "${books[i].author}", "${books[i].synopsis}", "${books[i].url}", "${categoryExists.key}"
         )`);  
       } else {
         const data = await db.run(`INSERT INTO categories (
@@ -26,12 +27,13 @@ module.exports = {
         )`)
     
         await db.run(`INSERT INTO books (
-          id, title, author, cover, synopsis, url, categoryID
+          id, title, author, synopsis, url, categoryID
         ) VALUES (
-          "${id}", "${books[i].title}", "${books[i].author}", "${books[i].cover}", "${books[i].synopsis}", "${books[i].url}", "${data.lastID}"
+          "${id}", "${books[i].title}", "${books[i].author}", "${books[i].synopsis}", "${books[i].url}", "${data.lastID}"
         )`);  
       }
     }
+
     await db.close();
 
     return response.status(200).json({
@@ -58,8 +60,6 @@ module.exports = {
     const book = await db.all(`SELECT * FROM books WHERE id="${id}"`);
     const sameAuthor = await db.all(`SELECT * FROM books WHERE author="${book[0].author}" AND NOT title="${book[0].title}"`);
     const category = await db.all(`SELECT description FROM categories`);
-
-    console.log(sameAuthor);
     
     await db.close();
 

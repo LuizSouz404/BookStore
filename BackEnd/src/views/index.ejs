@@ -45,14 +45,14 @@
   
       <main>
         <div class="slider">
-          <h2>Popular Books</h2>
+          <h2>Livros Novos</h2>
           <div class="carousel">
 
             <% books.forEach(book => { %>
 
               <a href="book/<%= book.id %>">
                 <div class="book">
-                  <img src="<%= book.cover %>"  alt="<%= book.title %>">
+                  <img src="/images/<%= book.id %>.jpg"  alt="<%= book.title %>">
     
                   <strong><%= book.title %></strong>
     

@@ -1,5 +1,8 @@
 const express = require('express');
-const BookController = require('./Controller/BookController.');
+const multer = require('multer');
+const uploadConfig = require('./config/upload');
+
+const BookController = require('./Controller/BookController');
 const RequestController = require('./Controller/RequestController');
 const SearchController = require('./Controller/SearchController');
 
