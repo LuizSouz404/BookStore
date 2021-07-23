@@ -265,3 +265,13 @@ header a strong:hover {
     margin-right: 35%;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .side-bar {
+    display: none;
+  }
+
+  main {
+    width: 100vw;
+  }
+}

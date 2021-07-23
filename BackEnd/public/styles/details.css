@@ -96,3 +96,150 @@
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
+
+/*********** RESPONSIVITY ***********/
+
+.btn-responsive {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2rem;
+  background-color: var(--blue);
+  box-shadow: 2px 2px 7px 0px rgb(0 0 0 / 40%);
+
+  transition: 1s;
+}
+
+.btn-responsive > .btn {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-responsive > .btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*********** RESPONSIVITY ***********/
+
+@media only screen and (max-width: 1024px) {
+  .book-details .details {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .side-bar {
+    display: none;
+  }
+
+  .btn-responsive {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .book-details {
+    width: 125%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .book-details .details {
+    margin-left: 3rem;
+  }
+
+  .button-details {
+    font-size: 1rem;
+  }
+
+  .carousel {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .book-details {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .book-details > img {
+    width: 25.5rem;
+  }
+
+  .book-details .details p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .book-details .details strong {
+    font-size: 3rem;
+  }
+
+  .book-details .details span {
+    font-size: 1.3rem;
+  }
+
+  .button-details {
+    font-size: 0.8rem;
+  }
+
+  .carousel {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .book-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-details .details {
+    width: 95%;
+    margin: 0;
+  }
+
+  .carousel {
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+  }
+
+  .carousel a {
+    width: 15rem;
+  }
+
+  .carousel a > div {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  header form {
+    width: 50%;
+  }
+
+  .carousel {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .carousel a {
+    width: 13rem;
+  }
+
+  .carousel a div {
+    width: 13rem;
+  }
+}

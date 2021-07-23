@@ -19,6 +19,6 @@ server.use(express.json());
 
 server.use(routes);
 
-server.listen(process.env.PORT || 3333, () => {
+server.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on Port 3333 or on port ${process.env.PORT}`)
 })

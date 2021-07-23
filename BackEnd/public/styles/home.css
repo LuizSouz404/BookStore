@@ -42,6 +42,39 @@
   font-size: 1.2rem;
 }
 
+/*********** RESPONSIVITY ***********/
+
+.btn-responsive {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2rem;
+  background-color: var(--blue);
+  box-shadow: 2px 2px 7px 0px rgb(0 0 0 / 40%);
+
+  transition: 1s;
+}
+
+.btn-responsive > .btn {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-responsive > .btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*********** RESPONSIVITY ***********/
+
 @media only screen and (max-width: 1250px) {
   .carousel {
     grid-template-columns: auto auto auto auto auto;
@@ -61,8 +94,31 @@
   }
 }
 
-/*@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
+  .carousel {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .btn-responsive {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 615px) {
   .carousel {
     grid-template-columns: auto auto auto;
   }
-}*/
+}
+
+@media only screen and (max-width: 465px) {
+  header form {
+    width: 50%;
+  }
+  .book:hover {
+    transform: scale(1.1);
+  }
+  .carousel {
+    grid-template-columns: auto auto;
+  }
+}

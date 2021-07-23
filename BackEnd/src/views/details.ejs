@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/details.css">
     <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/styles/category.css">
     
     <!-- SCRIPTS -->
     <script src="/scripts/main.js" defer type="module"></script>
@@ -110,6 +111,27 @@ Envie uma requisição que disponibilizarem o mais rapido possivel
             <button class="blue">Enviar</button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- Button Responsive -->
+    <div class="btn-responsive">
+      <div class="btn">
+        <img src="/images/list.svg" alt="C">
+      </div>
+    </div>
+
+
+    <!-- Category Responsive -->
+
+    <div class="category-wrapper">
+      <div class="category">
+        <h2>Categorias</h2>
+        <ul>
+          <% categories.forEach(category => { %>
+            <li><a href="/category/<%= category.description %>"><%= category.description.replace('-', ' ') %></a></li>
+          <% }) %>
+        </ul>
       </div>
     </div>
 
